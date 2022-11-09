@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Element>
+    <Script>
+        <Name>BridgeParts\IGirderReinforcement.py</Name>
+        <Title>I-Girder Reinforcement</Title>
+        <TextId>1000</TextId>
+        <Version>1.0</Version>
+        <GeometryExpand>0</GeometryExpand>
+        <ReadLastInput>False</ReadLastInput>
+    </Script>
+
+    <Page>
+        <Name>PageGeometery</Name>
+        <Text>Geometry</Text>
+        <TextId>1001</TextId>
+
+        <Parameter>
+            <Name>GeometryPic</Name>
+            <Value>I-GirderReinforcementPaletteGeometry.png</Value>
+            <Orientation>Middle</Orientation>
+            <ValueType>Picture</ValueType>
+        </Parameter>
+        <Parameter>
+            <Name>PlacementExpander</Name>
+            <Text>Placement</Text>
+            <TextId>1101</TextId>
+            <ValueType>Expander</ValueType>
+            <Parameter>
+                <Name>PlacementDefaultBottom</Name>
+                <Text>Placement (default Bottom)</Text>
+                <TextId>1105</TextId>
+                <Value>1</Value>
+                <ValueType>Integer</ValueType>
+            </Parameter>
+        </Parameter>
+        <Parameter>
+            <Name>GeneralExpander</Name>
+            <Text>General</Text>
+            <TextId>1110</TextId>
+            <ValueType>Expander</ValueType>
+            <Parameter>
+                <Name>GirderHeightRow</Name>
+                <Text>Height</Text>
+                <TextId>1111</TextId>
+                <ValueType>Row</ValueType>
+                <Parameter>
+                    <Name>GirderHeight</Name>
+                    <Value>1600</Value>
+                    <ImperialValue>5'3</ImperialValue>
+                    <MinValue>0</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>GirderHeightPic</Name>
+                    <Value>param01.png</Value>
+                    <ValueType>Picture</ValueType>
+                </Parameter>
+            </Parameter>
+
+            <Parameter>
+                <Name>GirderLength</Name>
+                <Text>Length</Text>
+                <TextId>1112</TextId>
+                <Value>24000</Value>
+                <ImperialValue>80'</ImperialValue>
+                <MinValue>0</MinValue>
+                <ValueType>Length</ValueType>
+            </Parameter>
+        </Parameter>
+
+        <Parameter>
+            <Name>TopFlangeExpander</Name>
+            <Text>Top flange</Text>
+            <ValueType>Expander</ValueType>
+            <Parameter>
+                <Name>TopFlangeWidthRow</Name>
+                <TextId>1115</TextId>
+                <Text>Width</Text>
+                <ValueType>Row</ValueType>
+
+                <Parameter>
+                    <Name>TopFlangeWidth</Name>
+                    <Value>1000</Value>
+                    <ImperialValue>3'6</ImperialValue>
+                    <MinValue>0</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>TopFlangeWidthPic</Name>
+                    <Value>param02.png</Value>
+                    <ValueType>Picture</ValueType>
+                </Parameter>
+            </Parameter>
+
+            <Parameter>
+                <Name>TopFlangeThicknessRow</Name>
+                <Text>Thickness</Text>
+                <TextId>1114</TextId>
+                <ValueType>Row</ValueType>
+
+                <Parameter>
+                    <Name>TopFlangeThickness</Name>
+                    <Value>120</Value>
+                    <ImperialValue>0'5</ImperialValue>
+                    <MinValue>0</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>TopFlangeThicknessPic</Name>
+                    <Value>param03.png</Value>
+                    <ValueType>Picture</ValueType>
+                </Parameter>
+            </Parameter>
+
+            <Parameter>
+                <Name>TopFlangeInclinationHeightRow</Name>
+                <Text>Inclination height</Text>
+                <TextId>1118</TextId>
+                <ValueType>Row</ValueType>
+
+                <Parameter>
+                    <Name>TopFlangeInclinationHeight</Name>
+                    <Value>75</Value>
+                    <ImperialValue>0'3</ImperialValue>
+                    <MinValue>0</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>TopFlangeInclinationHeightPic</Name>
+                    <Value>param04.png</Value>
+                    <ValueType>Picture</ValueType>
+                </Parameter>
+            </Parameter>
+
+        </Parameter>
+
+        <Parameter>
+            <Name>WebExpander</Name>
+            <Text>Web</Text>
+            <TextId>1117</TextId>
+            <ValueType>Expander</ValueType>
+
+            <Parameter>
+                <Name>WebWidthRow</Name>
+                <Text>Width</Text>
+                <TextId>1113</TextId>
+                <ValueType>Row</ValueType>
+
+                <Parameter>
+                    <Name>WebWidth</Name>
+                    <Value>200</Value>
+                    <ImperialValue>0'8</ImperialValue>
+                    <MinValue>0</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>WebWidthPic</Name>
+                    <Value>param05.png</Value>
+                    <ValueType>Picture</ValueType>
+                </Parameter>
+            </Parameter>
+        </Parameter>
+
+        <Parameter>
+            <Name>BottomFlangeExpander</Name>
+            <Text>Bottom flange</Text>
+            <TextId>1116</TextId>
+            <ValueType>Expander</ValueType>
+
+            <Parameter>
+                <Name>BottomFlangeWidthRow</Name>
+                <Text>Width</Text>
+                <ValueType>Row</ValueType>
+                <Parameter>
+                    <Name>BottomFlangeWidth</Name>
+                    <Value>700</Value>
+                    <ImperialValue>2'4</ImperialValue>
+                    <MinValue>0</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>BottomFlangeWidthPic</Name>
+                    <Value>param06.png</Value>
+                    <ValueType>Picture</ValueType>
+                </Parameter>
+            </Parameter>
+
+            <Parameter>
+                <Name>BottomFlangeThicknessRow</Name>
+                <Text>Thickness</Text>
+                <TextId>1114</TextId>
+                <ValueType>Row</ValueType>
+                <Parameter>
+                    <Name>BottomFlangeThickness</Name>
+                    <Value>200</Value>
+                    <ImperialValue>0'8</ImperialValue>
+                    <MinValue>0</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>BottomFlangeThicknessPic</Name>
+                    <Value>param07.png</Value>
+                    <ValueType>Picture</ValueType>
+                </Parameter>
+            </Parameter>
+
+            <Parameter>
+                <Name>BottomFlangeInclinationHeightRow</Name>
+                <Text>Inclination height</Text>
+                <TextId>1118</TextId>
+                <ValueType>Row</ValueType>
+                <Parameter>
+                    <Name>BottomFlangeInclinationHeight</Name>
+                    <Value>250</Value>
+                    <MinValue>0</MinValue>
+                    <ImperialValue>0'10</ImperialValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>BottomFlangeInclinationHeightPic</Name>
+                    <Value>param04.png</Value>
+                    <ValueType>Picture</ValueType>
+                </Parameter>
+            </Parameter>
+        </Parameter>
+
+    </Page>
+
+    <Page>
+        <Name>PageReinforcement</Name>
+        <Text>Reinforcement</Text>
+        <TextId>1002</TextId>
+
+        <Parameter>
+            <Name>GeneralExpander</Name>
+            <Text>General</Text>
+            <TextId>1110</TextId>
+            <ValueType>Expander</ValueType>
+
+            <Parameter>
+                <Name>ConcreteGrade</Name>
+                <Text>Concrete strength grade</Text>
+                <TextId>1201</TextId>
+                <Value>11</Value>
+                <ValueType>ReinfConcreteGrade</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>SteelGrade</Name>
+                <Text>Steel grade</Text>
+                <TextId>1202</TextId>
+                <Value>4</Value>
+                <ValueType>ReinfSteelGrade</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>BendingRollerStirrup</Name>
+                <Text>Bending pin factor</Text>
+                <TextId>1203</TextId>
+                <Value>6</Value>
+                <ValueType>ReinfBendingRoller</ValueType>
+            </Parameter>
+        </Parameter>
+
+        <Parameter>
+            <Name>ConcreteCoverExpander</Name>
+            <Text>Concrete Cover</Text>
+            <TextId>1210</TextId>
+            <ValueType>Expander</ValueType>
+
+            <Parameter>
+                <Name>ConcreteCoverStart</Name>
+                <Text>Concrete cover at start</Text>
+                <TextId>1211</TextId>
+                <Value>50</Value>
+                <ImperialValue>0'2</ImperialValue>
+                <MinValue>0</MinValue>
+                <ValueType>Length</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>ConcreteCoverEnd</Name>
+                <Text>Concrete cover at end</Text>
+                <TextId>1212</TextId>
+                <Value>50</Value>
+                <ImperialValue>0'2</ImperialValue>
+                <MinValue>0</MinValue>
+                <ValueType>Length</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>Separator1</Name>
+                <ValueType>Separator</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>ConcreteCoverTopReinf</Name>
+                <Text>Cover at top of top flange</Text>
+                <TextId>1213</TextId>
+                <Value>25</Value>
+                <ImperialValue>0'1</ImperialValue>
+                <MinValue>0</MinValue>
+                <ValueType>Length</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>ConcreteCoverSideTopFlange</Name>
+                <Text>Cover at sides of top flange</Text>
+                <TextId>1214</TextId>
+                <Value>25</Value>
+                <ImperialValue>0'1</ImperialValue>
+                <MinValue>0</MinValue>
+                <ValueType>Length</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>ConcreteCoverWebStirrup</Name>
+                <Text>Cover at web</Text>
+                <TextId>1215</TextId>
+                <Value>25</Value>
+                <ImperialValue>0'1</ImperialValue>
+                <MinValue>0</MinValue>
+                <ValueType>Length</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>ConcreteCoverBottomReinf</Name>
+                <Text>Cover at bottom of bottom flange</Text>
+                <TextId>1216</TextId>
+                <Value>25</Value>
+                <ImperialValue>0'1</ImperialValue>
+                <MinValue>0</MinValue>
+                <ValueType>Length</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>ConcreteCoverSideBottomFlange</Name>
+                <Text>Cover at sides of bottom flange</Text>
+                <TextId>1217</TextId>
+                <Value>25</Value>
+                <ImperialValue>0'1</ImperialValue>
+                <MinValue>0</MinValue>
+                <ValueType>Length</ValueType>
+            </Parameter>
+        </Parameter>
+
+        <Parameter>
+            <Name>StirrupExpander</Name>
+            <Text>Stirrup</Text>
+            <TextId>1220</TextId>        
+            <Value>False</Value>
+            <ValueType>Expander</ValueType>
+            <Parameter>
+                <Name>StirrupImg</Name>
+                <Value>I-GirderReinforcementPaletteStirrup.png</Value>
+                <Orientation>Middle</Orientation>
+                <ValueType>Picture</ValueType>
+            </Parameter>
+
+            <Parameter>
+                <Name>TopStirrupCheckBoxRow</Name>
+                <Text>Top transverse</Text>
+                <TextId>1221</TextId>
+                <ValueType>Row</ValueType>
+                <Parameter>
+                    <Name>TopStirrupCheckBox</Name>
+                    <Value>1</Value>
+                    <ValueType>CheckBox</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>TopStirrupCheckBoxPic</Name>
+                    <Value>param01.png</Value>
+                    <ValueType>Picture</ValueType>
+                </Parameter>
+            </Parameter>
+            <Parameter>
+                <Name>WebStirrupCheckBoxRow</Name>
+                <Text>Web stirrup</Text>
+                <TextId>1222</TextId>
+                <ValueType>Row</ValueType>
+                <Parameter>
+                    <Name>WebStirrupCheckBox</Name>
+                    <Value>1</Value>
+                    <ValueType>CheckBox</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>WebStirrupCheckBoxPic</Name>
+                    <Value>param02.png</Value>
+                    <ValueType>Picture</ValueType>
+                </Parameter>
+            </Parameter>
+            <Parameter>
+                <Name>BottomStirrupCheckBoxRow</Name>
+                <Text>Bottom stirrup</Text>
+                <TextId>1223</TextId>        
+                <ValueType>Row</ValueType>
+                <Parameter>
+                    <Name>BottomStirrupCheckBox</Name>
+                    <Value>1</Value>
+                    <ValueType>CheckBox</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>BottomStirrupCheckBoxPic</Name>
+                    <Value>param03.png</Value>
+                    <ValueType>Picture</ValueType>
+                </Parameter>
+            </Parameter>
+            <Parameter>
+                <Name>LayerStirrup</Name>
+                <Text>Layer</Text>
+                <TextId>1204</TextId>
+                <Value>3864</Value>
+                <ValueType>Layer</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>Separator1</Name>
+                <ValueType>Separator</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>RegionsImg</Name>
+                <Value>I-GirderReinforcementPaletteRegions.png</Value>
+                <Orientation>Middle</Orientation>
+                <ValueType>Picture</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>RegionTableRow</Name>
+                <Text>Region</Text>
+                <TextId>1224</TextId>
+                <ValueType>Row</ValueType>
+                <Parameter>
+                    <Name>RegionTableColOne</Name>
+                    <Value>Length</Value>
+                    <TextId>1112</TextId>                    
+                    <ValueType>Text</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>RegionTableColTwo</Name>
+                    <Value>Top/Bottom spacing</Value>
+                    <ValueType>Text</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>RegionTableColThree</Name>
+                    <Value>Web spacing</Value>
+                    <ValueType>Text</ValueType>
+                </Parameter>        
+            </Parameter>
+            <Parameter>
+                <Name>RegionTableRowOne</Name>
+                <Text>1</Text>
+                <ValueType>Row</ValueType>
+                <Parameter>
+                    <Name>RegionOneLength</Name>
+                    <Value>300</Value>
+                    <ImperialValue>1'</ImperialValue>
+                    <MaxValue>0.5 * GirderLength</MaxValue>
+                    <MinValue>0</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>RegionOneStirrupSpacing</Name>
+                    <Value>75</Value>
+                    <ImperialValue>0'3</ImperialValue>
+                    <MinValue>20</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>    
+                <Parameter>
+                    <Name>RegionOneWebSpacing</Name>
+                    <Value>75</Value>
+                    <ImperialValue>0'3</ImperialValue>
+                    <MinValue>20</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>     
+            </Parameter>
+            <Parameter>
+                <Name>RegionTableRowTwo</Name>
+                <Text>2</Text>
+                <ValueType>Row</ValueType>
+                <Parameter>
+                    <Name>RegionTwoLength</Name>
+                    <Value>450</Value>
+                    <ImperialValue>1'6</ImperialValue>
+                    <MinValue>0</MinValue>
+                    <MaxValue>0.5 * GirderLength - RegionOneLength</MaxValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>RegionTwoStirrupSpacing</Name>
+                    <Value>150</Value>
+                    <ImperialValue>0'6</ImperialValue>
+                    <MinValue>20</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>  
+                <Parameter>
+                    <Name>RegionTwoWebSpacing</Name>
+                    <Value>150</Value>
+                    <ImperialValue>0'6</ImperialValue>
+                    <MinValue>20</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>        
+            </Parameter>
+            <Parameter>
+                <Name>RegionTableRowThree</Name>
+                <Text>3</Text>
+                <ValueType>Row</ValueType>
+                <Parameter>
+                    <Name>RegionThreeLength</Name>
+                    <Value>900</Value>
+                    <ImperialValue>3'0</ImperialValue>
+                    <MaxValue>0.5 * GirderLength - RegionOneLength - RegionTwoLength</MaxValue>
+                    <MinValue>0</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>RegionThreeStirrupSpacing</Name>
+                    <Value>200</Value>
+                    <ImperialValue>0'8</ImperialValue>
+                    <MinValue>20</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>RegionThreeWebSpacing</Name>
+                    <Value>200</Value>
+                    <ImperialValue>0'8</ImperialValue>
+                    <MinValue>20</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>
+            </Parameter>
+            <Parameter>
+                <Name>RegionTableRowFour</Name>
+                <Text>4</Text>
+                <ValueType>Row</ValueType>
+                <Parameter>
+                    <Name>RegionFourLength</Name>
+                    <Value>0</Value>
+                    <ImperialValue>0</ImperialValue>
+                    <MaxValue>0.5 * GirderLength - RegionOneLength - RegionTwoLength - RegionThreeLength</MaxValue>
+                    <MinValue>0</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>RegionFourStirrupSpacing</Name>
+                    <Value>300</Value>
+                    <ImperialValue>1'</ImperialValue>
+                    <MinValue>20</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>RegionFourWebSpacing</Name>
+                    <Value>300</Value>
+                    <ImperialValue>1'</ImperialValue>
+                    <MinValue>20</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>
+            </Parameter>
+            <Parameter>
+                <Name>RegionTableRowFive</Name>
+                <Text>5</Text>
+                <ValueType>Row</ValueType>
+                <Parameter>
+                    <Name>RegionFiveLength</Name>
+                    <Value>0</Value>
+                    <ImperialValue>0</ImperialValue>
+                    <MaxValue>0.5 * GirderLength - RegionOneLength - RegionTwoLength - RegionThreeLength - RegionFourLength</MaxValue>
+                    <MinValue>0</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>RegionFiveStirrupSpacing</Name>
+                    <Value>300</Value>
+                    <ImperialValue>1'</ImperialValue>
+                    <MinValue>20</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>RegionFiveWebSpacing</Name>
+                    <Value>300</Value>
+                    <ImperialValue>1'</ImperialValue>
+                    <MinValue>20</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>
+            </Parameter>
+            <Parameter>
+                <Name>RegionTableRowSix</Name>
+                <Text>6</Text>
+                <ValueType>Row</ValueType>
+                <Parameter>
+                    <Name>RegionSixLength</Name>
+                    <Value>0</Value>
+                    <ImperialValue>0</ImperialValue>
+                    <MaxValue>0.5 * GirderLength - RegionOneLength - RegionTwoLength - RegionThreeLength - RegionFourLength - RegionFiveLength</MaxValue>
+                    <MinValue>0</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>RegionSixStirrupSpacing</Name>
+                    <Value>300</Value>
+                    <ImperialValue>1'</ImperialValue>
+                    <MinValue>20</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>RegionSixWebSpacing</Name>
+                    <Value>300</Value>
+                    <ImperialValue>1'</ImperialValue>
+                    <MinValue>20</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>        
+            </Parameter>
+            <Parameter>
+                <Name>RegionTableRowSeven</Name>
+                <Text>Midspan</Text>
+                <TextId>1227</TextId>
+                <ValueType>Row</ValueType>
+                <Parameter>
+                    <Name>RegionSevenLength</Name>
+                    <Enable>False</Enable>
+                    <Value>0</Value>
+                    <ImperialValue>0</ImperialValue>
+                    <MinValue>0</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>RegionSevenStirrupSpacing</Name>
+                    <Value>300</Value>
+                    <ImperialValue>1'</ImperialValue>
+                    <MinValue>20</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>RegionSevenWebSpacing</Name>
+                    <Value>300</Value>
+                    <ImperialValue>1'</ImperialValue>
+                    <MinValue>20</MinValue>
+                    <ValueType>Length</ValueType>
+                </Parameter> 
+            </Parameter>
+        </Parameter>
+
+        <Parameter>
+            <Name>TopStirrupExpander</Name>
+            <Text>Top Transverse</Text>
+            <TextId>1221</TextId>
+            <Value>True</Value>
+            <Visible>TopStirrupCheckBox</Visible>
+            <ValueType>Expander</ValueType>
+            <Parameter>
+                <Name>DiameterTopStirrup</Name>
+                <Text>Diameter</Text>
+                <TextId>1228</TextId>
+                <Value>14</Value>
+                <ValueType>ReinfBarDiameter</ValueType>
+            </Parameter>
+        </Parameter>
+
+        <Parameter>
+            <Name>WebStirrupExpander</Name>
+            <Text>Web Stirrups</Text>
+            <TextId>1222</TextId>
+            <Value>True</Value>
+            <Visible>WebStirrupCheckBox</Visible>
+            <ValueType>Expander</ValueType>
+
+            <Parameter>
+                <Name>DiameterWebStirrup</Name>
+                <Text>Diameter</Text>
+                <TextId>1228</TextId>
+                <Value>14</Value>
+                <ValueType>ReinfBarDiameter</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>AnchorageLengthWebStirrup</Name>
+                <Text>Anchorage Length</Text>
+                <TextId>1229</TextId>
+                <Value>250</Value>
+                <ImperialValue>0'10</ImperialValue>
+                <ValueType>Length</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>HookLengthWebStirrup</Name>
+                <Text>Hook Length</Text>
+                <TextId>1230</TextId>
+                <Value>200</Value>
+                <ImperialValue>0'8</ImperialValue>
+                <ValueType>Length</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>HookAngleWebStirrup</Name>
+                <Text>Hook angle</Text>
+                <TextId>1231</TextId>                
+                <Value>-90</Value>
+                <ValueType>Angle</ValueType>
+            </Parameter>
+        </Parameter>
+
+        <Parameter>
+            <Name>BottomStirrupExpander</Name>
+            <Text>Bottom Stirrup</Text>
+            <TextId>1223</TextId>
+            <Value>True</Value>
+            <Visible>BottomStirrupCheckBox</Visible>
+            <ValueType>Expander</ValueType>
+
+            <Parameter>
+                <Name>DiameterBottomStirrup</Name>
+                <Text>Diameter</Text>
+                <TextId>1228</TextId>
+                <Value>12</Value>
+                <ValueType>ReinfBarDiameter</ValueType>
+            </Parameter>
+           <Parameter>
+                <Name>HookLengthBottomStirrup</Name>
+                <Text>Hook Length</Text>
+                <TextId>1230</TextId>
+                <Value>150</Value>
+                <ImperialValue>0'6</ImperialValue>
+                <ValueType>Length</ValueType>
+            </Parameter>
+        </Parameter>
+
+        <Parameter>
+            <Name>LongitudinalExpander</Name>
+            <Text>Longitudinal Reinf.</Text>
+            <TextId>1232</TextId>
+            <Value>False</Value>
+            <ValueType>Expander</ValueType>
+
+            <Parameter>
+                <Name>LongReinfImg</Name>
+                <Value>I-GirderReinforcementPaletteLongReinf.png</Value>
+                <Orientation>Middle</Orientation>
+                <ValueType>Picture</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>TopLongReinfCheckBoxRow</Name>
+                <Text>Top Flange Long. Reinf.</Text>
+                <TextId>1233</TextId>
+                <ValueType>Row</ValueType>
+                <Parameter>
+                    <Name>TopLongReinfCheckBox</Name>
+                    <Value>1</Value>
+                    <ValueType>CheckBox</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>TopLongReinfCheckBoxPic</Name>
+                    <Value>param01.png</Value>
+                    <ValueType>Picture</ValueType>
+                </Parameter>
+            </Parameter>
+
+            <Parameter>
+                <Name>BottomLongReinfCheckBoxRow</Name>
+                <Text>Bottom Flange Long. Reinf.</Text>
+                <TextId>1234</TextId>
+                <ValueType>Row</ValueType>
+                <Parameter>
+                    <Name>BottomLongReinfCheckBox</Name>
+                    <Value>1</Value>
+                    <ValueType>CheckBox</ValueType>
+                </Parameter>
+                <Parameter>
+                    <Name>BottomLongReinfCheckBoxPic</Name>
+                    <Value>param02.png</Value>
+                    <ValueType>Picture</ValueType>
+                </Parameter>
+            </Parameter>
+
+            <Parameter>
+                <Name>Separator1</Name>
+                <ValueType>Separator</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>LayerLongitudinal</Name>
+                <Text>Layer</Text>
+                <TextId>1204</TextId>
+                <Value>3864</Value>
+                <ValueType>Layer</ValueType>
+            </Parameter>
+        </Parameter>
+
+        <Parameter>
+            <Name>TopFlangeLongReinfExpander</Name>
+            <Text>Top Flange Long. Reinf.</Text>
+            <TextId>1233</TextId>
+            <Value>True</Value>
+            <Visible>TopLongReinfCheckBox</Visible>
+            <ValueType>Expander</ValueType>
+
+            <Parameter>
+                <Name>DiameterTopFlangeReinf</Name>
+                <Text>Diameter</Text>
+                <TextId>1228</TextId>
+                <Value>14</Value>
+                <ValueType>ReinfBarDiameter</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>NumberTopFlangeReinf</Name>
+                <Text>Number</Text>
+                <TextId>1235</TextId>
+                <Value>8</Value>
+                <ValueType>Integer</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>SpacingTopFlangeReinf</Name>
+                <Text>Spacing</Text>
+                <TextId>1236</TextId>
+                <Value>75</Value>
+                <ImperialValue>0'3</ImperialValue>
+                <ValueType>Length</ValueType>
+            </Parameter>
+        </Parameter>
+
+        <Parameter>
+            <Name>BottomFlangeLongReinfExpander</Name>
+            <Text>Bottom Flange Long. Reinf.</Text>
+            <TextId>1234</TextId>
+            <Value>True</Value>
+            <Visible>BottomLongReinfCheckBox</Visible>
+            <ValueType>Expander</ValueType>
+
+            <Parameter>
+                <Name>DiameterBottomFlangeReinf</Name>
+                <Text>Diameter</Text>
+                <TextId>1228</TextId>
+                <Value>14</Value>
+                <ValueType>ReinfBarDiameter</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>NumberBottomFlangeReinf</Name>
+                <Text>Number</Text>
+                <TextId>1235</TextId>
+                <Value>12</Value>
+                <ValueType>Integer</ValueType>
+            </Parameter>
+            <Parameter>
+                <Name>SpacingBottomFlangeReinf</Name>
+                <Text>Spacing</Text>
+                <TextId>1236</TextId>
+                <Value>75</Value>
+                <ImperialValue>0'3</ImperialValue>
+                <ValueType>Length</ValueType>
+            </Parameter>
+        </Parameter>
+    </Page>
+
+</Element>
+
+
